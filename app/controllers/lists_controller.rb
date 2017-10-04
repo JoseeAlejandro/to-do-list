@@ -29,7 +29,7 @@ class ListsController < OpenReadController
 
   # PATCH/PUT /lists/1
   def update
-    binding.pry
+  #  binding.pry
   #  @list = current_user.list.find(params[:id])
     if @list.update(list_params)
       #render json: @list
@@ -41,7 +41,7 @@ class ListsController < OpenReadController
 
   # DELETE /lists/1
   def destroy
-    @list = current_user.list.find(params[:id])
+    @list = current_user.lists.find(params[:id])
     @list.destroy
   end
 

@@ -15,6 +15,7 @@ class ApplicationController < ActionController::API
     rescue ActiveSupport::MessageVerifier::InvalidSignature
       false
     end
+
     User.find_by token: token
   end
 

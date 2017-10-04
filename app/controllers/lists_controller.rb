@@ -12,7 +12,7 @@ class ListsController < OpenReadController
 
   # GET /lists/1
   def show
-    list = current_user.list.find(params[:id])
+    @list = current_user.lists.find(params[:id])
     render json: @list
   end
 
